@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
@@ -46,7 +47,7 @@ public class NewArticleDetailFragment extends Fragment implements
 
     private Toolbar mToolbar;
     private ImageButton mUpButton;
-
+    private FloatingActionButton mFab;
 
     private ImageView mPhotoView;
     private boolean mIsCard = false;
@@ -99,8 +100,8 @@ public class NewArticleDetailFragment extends Fragment implements
                              Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.new_fragment_article_detail, container, false);
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
-
         mToolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
+        mFab = (FloatingActionButton) mRootView.findViewById(R.id.share_fab);
         ((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -112,7 +113,7 @@ public class NewArticleDetailFragment extends Fragment implements
             }
         });
 
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+        mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
