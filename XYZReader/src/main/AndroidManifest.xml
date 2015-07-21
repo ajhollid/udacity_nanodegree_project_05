@@ -36,6 +36,7 @@
                 android:value=".ui.ArticleListActivity" />
         </activity>
 
+
         <service android:name=".data.UpdaterService"
             android:exported="false" />
 

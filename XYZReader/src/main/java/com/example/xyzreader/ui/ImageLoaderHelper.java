@@ -8,6 +8,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
+/**
+ * Created by Alexander on 7/21/2015.
+ */
 public class ImageLoaderHelper {
     private static ImageLoaderHelper sInstance;
 

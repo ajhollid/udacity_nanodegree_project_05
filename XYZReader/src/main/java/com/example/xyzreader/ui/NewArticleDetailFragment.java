@@ -52,6 +52,8 @@ public class NewArticleDetailFragment extends Fragment implements
     private ImageView mPhotoView;
     private boolean mIsCard = false;
 
+    private int mMutedColor = 0xFF333333;
+
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -102,8 +104,8 @@ public class NewArticleDetailFragment extends Fragment implements
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
         mToolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
         mFab = (FloatingActionButton) mRootView.findViewById(R.id.share_fab);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         mUpButton = (ImageButton) mRootView.findViewById(R.id.action_up);
         mUpButton.setOnClickListener(new View.OnClickListener() {
@@ -160,8 +162,10 @@ public class NewArticleDetailFragment extends Fragment implements
                             Bitmap bitmap = imageContainer.getBitmap();
                             if (bitmap != null) {
                                 Palette p = Palette.generate(bitmap, 12);
-
+                                mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
+                                mRootView.findViewById(R.id.meta_bar)
+                                        .setBackgroundColor(mMutedColor);
                             }
                         }
 
@@ -170,6 +174,7 @@ public class NewArticleDetailFragment extends Fragment implements
 
                         }
                     });
+
         } else {
             mRootView.setVisibility(View.GONE);
             titleView.setText("N/A");
