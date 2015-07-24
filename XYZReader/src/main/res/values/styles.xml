@@ -23,5 +23,8 @@
         <item name="colorAccent">@color/theme_accent</item>
     </style>
 
+    <style name="Theme.ListActivity" parent="@style/Theme.Bacon"/>
+
+    <style name="Theme.Detail" parent="@style/Theme.Bacon"/>
 
 </resources>
