@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/F:/Development/Android/Projects/xyzreader/XYZReader/src/main/res/values-w800dp/macro_layout.xml -->
+    <eat-comment/>
+    <dimen name="detail_card_max_width">704dp</dimen>
+    <integer name="list_column_count">3</integer>
+</resources>
