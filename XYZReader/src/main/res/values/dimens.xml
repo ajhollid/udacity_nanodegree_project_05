@@ -8,6 +8,12 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
 
+    <!--12dp for the recycler marign + 4dp from the cardview totals 16-->
+    <dimen name="recycler_horizontal_margin">12dp</dimen>
+
+
+    <dimen name="toolbar_elevation">8dp</dimen>
+
     <dimen name="fab_elevation">8dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
@@ -16,5 +22,10 @@
     <dimen name="text_size_caption">12sp</dimen>
 
     <dimen name="app_bar_height">250dp</dimen>
+
+    <dimen name="card_margin">4dp</dimen>
+
+    <dimen name="toolbar_inset">0dp</dimen>
+    <dimen name="fab_border_width">0dp</dimen>
 
 </resources>

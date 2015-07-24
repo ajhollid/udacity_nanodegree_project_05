@@ -34,13 +34,13 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:elevation="8dp"
+                android:elevation="@dimen/toolbar_elevation"
                 app:layout_collapseMode="pin"
                 app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
                 <ImageButton
                     android:id="@+id/action_up"
-                    android:layout_width="56dp"
+                    android:layout_width="?actionBarSize"
                     android:layout_height="?actionBarSize"
                     android:background="?selectableItemBackgroundBorderless"
                     android:contentDescription="@string/up"
@@ -122,9 +122,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_share"
-        app:elevation="8dp"
+        app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
-        app:borderWidth="0dp"
+        app:borderWidth="@dimen/fab_border_width"
         app:layout_anchor="@id/appBarLayout"
         app:layout_anchorGravity="bottom|right|end"/>
 
